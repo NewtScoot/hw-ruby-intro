@@ -29,15 +29,20 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return "Hello, " + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  return false if s.length == 0
+  s.each_char do |x|
+    return false if (x != '0' and x != '1')
+  end
+  return true if s.to_i(2) % 4 == 0
+  return false
 end
 
 # Part 3
